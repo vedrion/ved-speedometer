@@ -17,3 +17,5 @@ files {
     'ui/styles/style.css',
     'ui/scripts/script.js'
 }
+
+lua54 'yes'
