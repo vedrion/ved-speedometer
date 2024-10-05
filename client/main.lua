@@ -2,7 +2,7 @@ local lastGear = 0
 
 -- Event to show the speedometer with all the required data
 RegisterNetEvent("speedometer:show")
-AddEventHandler("speedometer:show", function(isMetric, speed, rpm, gear, fuelLevel)
+AddEventHandler("speedometer:show", function(isMetric, speed, rpm, gear, fuelLevel, engineHealth)
     local showRpm = Config.Display.ShowRpm
     local showGear = Config.Display.ShowGear
     local enableSounds = Config.Sound.EnableSounds
@@ -19,6 +19,7 @@ AddEventHandler("speedometer:show", function(isMetric, speed, rpm, gear, fuelLev
         rpm = showRpm and rpm or nil,
         gear = showGear and gear or nil,
         fuel = fuelLevel,
+        engineHealth = engineHealth
     })
 
     if gear ~= lastGear then
@@ -46,7 +47,8 @@ Citizen.CreateThread(function()
         local pedVehicle = GetVehiclePedIsIn(GetPlayerPed(-1), false)
         if pedVehicle ~= 0 and GetIsVehicleEngineRunning(pedVehicle) then
             local fuelLevel = Config.GetVehicleFuel(pedVehicle)
-            TriggerEvent("speedometer:show", Config.UseMetricMeasurements, GetEntitySpeed(pedVehicle), GetVehicleCurrentRpm(pedVehicle), GetVehicleCurrentGear(pedVehicle), fuelLevel) 
+            local engineHealth = GetVehicleEngineHealth(pedVehicle) / 10
+            TriggerEvent("speedometer:show", Config.UseMetricMeasurements, GetEntitySpeed(pedVehicle), GetVehicleCurrentRpm(pedVehicle), GetVehicleCurrentGear(pedVehicle), fuelLevel, engineHealth) 
         else
             TriggerEvent("speedometer:hide")
         end

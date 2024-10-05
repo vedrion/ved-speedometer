@@ -82,10 +82,11 @@
   margin-top: 18px;
   align-items: center;
   margin-bottom: 0%;
+  margin-right: 10px;
 }
 
 .fuel i {
-  color: #ffffff;
+  color: #fff;
   margin-right: 5px;
 }
 
@@ -94,7 +95,7 @@
   height: 10px;
   background-color: #ccc;
   margin-top: 10px;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -104,6 +105,19 @@
   width: 100%;
   background-color: orange;
   transition: width 0.5s ease-in-out;
+}
+
+.engine-health {
+  font-size: 18px;
+  display: flex;
+  margin-top: 18px;
+  align-items: center;
+  margin-bottom: 0%;
+}
+
+.engine-health i {
+  color: #ff7979;
+  margin-right: 5px;
 }
 
 .hidden {

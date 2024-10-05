@@ -1,10 +1,10 @@
 # Speedometer
 
-A lightweight and easy-to-use speedometer script for FiveM that displays your vehicle's speed, RPM, fuel level, and gear.
+A lightweight and easy-to-use speedometer script for FiveM that displays your vehicle's speed, RPM, fuel level, engine health and gear.
 
 ## Preview
 
-![Preview](https://imgur.com/RG1NYNe.png)
+![Preview](https://imgur.com/TuJe7lP.png)
 
 ## Installation
 
@@ -16,31 +16,34 @@ Move the downloaded folder to the `resources` directory of your FiveM server.
 
 ### 3. 🛠️ Update `server.cfg`
 - Open your `server.cfg` file, located in your server's main directory.
-- Add `ensure fivem-speedometer` to ensure the script starts with your server:
+- Add `ensure ved-speedometer` to ensure the script starts with your server:
 
 ## Changelog
 
 **Version 1.1.0**
 
-- **Added Features:**
+#### **[ New Features ]**
   - **Gear Change Sounds:** Introduced sounds that play upon gear changes in the speedometer.
 
   - **Configuration File:** Added a new file named `config.lua` for easier customization.
 
   - **Fuel System:** Added support for a fuel system that integrates with the speedometer.
 
+  - **Engine Health:** Added engine health status to the speedometer.
+
   - **In-Game Command:** Added a command to toggle speedometer settings in-game. The command name is configurable in `config.lua` to suit your preferences.
 
-- **Configurations:**
-  - **Measurement Type:** A new config, `UseMetricMeasurements`, allows you to directly switch between measurement types (KM/H or MPH).
+## Configurations
 
-  - **Display Options:** Added configuration to show or hide RPM and gear information in the speedometer.
+- **Measurement Type:** A new config, `UseMetricMeasurements`, allows you to directly switch between measurement types (KM/H or MPH).
 
-  - **Sound Settings:** Included an option to enable or disable gear change sounds.
+- **Display Options:** Added configuration to show or hide RPM and gear information in the speedometer.
 
-  - **Fuel System Settings:** You can add your own fuel system, with default support for `cdn-fuel`, `LegacyFuel`, `ox-fuel`, and `nd-fuel`.
+- **Sound Settings:** Included an option to enable or disable gear change sounds.
 
-  - **In-Game Settings:** Players can use an in-game command to configure the following settings:
+- **Fuel System Settings:** You can add your own fuel system, with default support for `cdn-fuel`, `LegacyFuel`, `ox-fuel`, and `nd-fuel`.
+
+- **In-Game Settings:** Players can use an in-game command to configure the following settings:
 
     - **Show/Hide RPM**
     - **Show/Hide Gear**

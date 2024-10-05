@@ -2,10 +2,11 @@ fx_version 'cerulean'
 games { 'gta5' }
 
 author 'Ved'
-description 'Speedometer script for FiveM'
+description 'Customizable Speedometer script for FiveM'
 version '1.1.0'
 
 -- GitHub: https://github.com/vedrion
+-- Website: https://ved.tebex.io/
 
 client_script 'config.lua'
 client_script 'client/main.lua'

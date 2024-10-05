@@ -11,6 +11,7 @@ window.addEventListener("DOMContentLoaded", () => {
       let measurementType = e.data.isMetric ? "km/h" : "mph";
       let rpm = e.data.rpm !== undefined ? e.data.rpm * 100 : null;
       let fuel = e.data.fuel !== undefined ? e.data.fuel : null;
+      let engineHealth = e.data.engineHealth !== undefined ? e.data.engineHealth : null;
 
       // Update speed and measurement type
       $(".speed").text(speed.toFixed(0));
@@ -32,8 +33,13 @@ window.addEventListener("DOMContentLoaded", () => {
 
       // Update fuel level
       if (fuel !== null) {
-        $(".fuel-percentage").text(`${fuel.toFixed(0)}%`);
+        $(".fuel-percentage").text(`${fuel.toFixed(0)}`);
         $(".fuel-bar-fill").css("width", `${fuel}%`);
+      }
+
+      // Update engine health
+      if (engineHealth !== null) {
+        $(".engine-health-percentage").text(`${engineHealth.toFixed(0)}`);
       }
 
       // Update gear information
