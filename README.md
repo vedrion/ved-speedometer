@@ -16,7 +16,7 @@ Move the downloaded folder to the `resources` directory of your FiveM server.
 
 ### 3. 🛠️ Update `server.cfg`
 - Open your `server.cfg` file, located in your server's main directory.
-- Add `ensure ved-speedometer` to ensure the script starts with your server:
+- Add `ensure ved-speedometer` to ensure the script starts with your server.
 
 ## Changelog
 
